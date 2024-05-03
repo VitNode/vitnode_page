@@ -1,0 +1,73 @@
+import { Steps } from "nextra/components";
+import { Tabs } from "nextra/components";
+
+# Get Started
+
+## 📦 Requirements
+
+- [Node.js 20+](https://nodejs.org/)
+- [pnpm 8+](https://pnpm.io/)
+- [PostgreSQL 16+](https://www.postgresql.org/)
+- Linux _(Debian 11+ recommended)_ for production
+
+### 🖥️ Hardware
+
+|         | Minimum        | Recommended    |
+| :------ | :------------- | :------------- |
+| CPU     | 1GHz (2+ core) | 1GHz (4+ core) |
+| RAM     | 2GB            | 8GB            |
+| Storage | 10GB           | 20GB           |
+| Network | 100Mbps        | 300Mbps        |
+| Https   | Yes            | Yes            |
+
+### 🧑‍💻 Browser
+
+|            | Minimum | Recommended |
+| :--------- | :------ | :---------- |
+| Chrome     | >= 91   | >= 115      |
+| Firefox    | >= 103  | >= 121      |
+| Edge       | >= 91   | >= 120      |
+| Safari     | >= 16   | >= 17.2     |
+| iOS Safari | >= 15   | >= 17.2     |
+| Opera      | >= 77   | >= 101      |
+
+## Installation Locally
+
+<Steps>
+
+### Get Files
+
+<Tabs items={['git', 'zip']}>
+  <Tabs.Tab>
+
+```bash
+git clone https://github.com/aXenDeveloper/vitnode.git && cd vitnode
+```
+
+  </Tabs.Tab>
+  <Tabs.Tab>
+    1. Go to [GitHub VitNode](https://github.com/aXenDeveloper/vitnode),
+    2. Click on the green button `Code`,
+    3. Click on `Download ZIP`,
+    4. Unzip the file on your server,
+    5. Open the folder in the terminal.
+  </Tabs.Tab>
+</Tabs>
+
+### Install Dependencies
+
+```bash
+pnpm i
+```
+
+### Docker Compose
+
+```bash
+pnpm docker:dev
+```
+
+### Finish
+
+Now you can go to [http://localhost:3000](http://localhost:3000) and see VitNode and run setup wizard.
+
+</Steps>
