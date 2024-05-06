@@ -102,14 +102,34 @@ const formSchema = z.object({
 
 - Emoji,
 - Image,
-- Mention
+- Mention,
+- Files
 
 ## Good to know
 
 - Convert `http` URLs to links is not working for users safety. Users need to use `https` instead,
 - `HTML` tags are not allowed. Users can use `Markdown` instead,
 - `Font Family` is not implemented. Users don't like to change it when they are writing,
-- `Code Block` has prettier support. Users can format code by pressing a button in the toolbar,
+- `Code Block` has prettier support. Users can format code by pressing a button in the toolbar
+
+### Allow Upload Files
+
+To allow upload files you have to pass `allowUploadFiles` props with `plugin` and `folder`. By default users don't have permission to upload files.
+
+```tsx {6-9}
+import { Editor } from "@/components/editor/editor";
+
+<Editor
+  onChange={field.onChange}
+  value={field.value}
+  allowUploadFiles={{
+    plugin: "forums",
+    folder: "posts"
+  }}
+/>;
+```
+
+It's important to set `plugin` and `folder` props. Without it, when admin wants to remove plugin, then all files from this plugin will be removed.
 
 ## Read only mode
 
@@ -119,4 +139,14 @@ To display content form editor you have to use `ReadOnlyEditor` component with u
 import { ReadOnlyEditor } from "@/components/editor/read-only/read-only";
 
 <ReadOnlyEditor value={value} />;
+```
+
+### Allow Download Attachments
+
+To allow download attachments you have to pass `allowDownloadAttachments` props. By default users don't have permission to download attachments.
+
+```tsx {3}
+import { ReadOnlyEditor } from "@/components/editor/read-only/read-only";
+
+<ReadOnlyEditor value={value} allowDownloadAttachments />;
 ```
