@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { DocsThemeConfig } from "nextra-theme-docs";
+import { type DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   logo: (
@@ -53,6 +53,10 @@ const config: DocsThemeConfig = {
       </defs>
     </svg>
   ),
+  project: {
+    link: "https://github.com/aXenDeveloper/vitnode/"
+  },
+  docsRepositoryBase: "https://github.com/VitNode/vitnode_page",
   head: (
     <>
       <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="48x48" />
@@ -61,12 +65,14 @@ const config: DocsThemeConfig = {
   primaryHue: 210,
   primarySaturation: 100,
   footer: {
-    text: <span>VitNode © {new Date().getFullYear()}</span>
+    component: () => {
+      return (
+        <div>
+          <span>VitNode © {new Date().getFullYear()}</span>
+        </div>
+      );
+    }
   },
-  project: {
-    link: "https://github.com/aXenDeveloper/vitnode/"
-  },
-  docsRepositoryBase: "https://github.com/aXenDeveloper/vitnode/tree/canary/docs",
   useNextSeoProps() {
     const { asPath } = useRouter();
     if (asPath !== "/") {

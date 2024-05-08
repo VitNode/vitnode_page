@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border !important;
   }
 
   body {
@@ -75,4 +75,9 @@
       display: none;
     }
   }
+}
+
+.nextra-sidebar-container:first-of-type > .nx-bg-white,
+.nextra-toc:first-of-type > .nextra-scrollbar > .nx-bg-white {
+  @apply bg-background shadow-none;
 }

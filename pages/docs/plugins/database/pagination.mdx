@@ -117,7 +117,7 @@ export class ShowBlogCategoriesService {
 
 We will use `inputPaginationCursor()` to create initial values for pagination.
 
-```ts {7-9, 20-31}
+```ts {7-9, 20-35}
 import { Injectable } from "@nestjs/common";
 
 import { ShowBlogCategoriesArgs } from "./dto/show.args";
@@ -161,7 +161,7 @@ export class ShowBlogCategoriesService {
 
 We will use `findMany()` method to get the data from the database with `with` argument to get the related data.
 
-```ts {33-39}
+```ts {27-29}
 @Injectable()
 export class ShowBlogCategoriesService {
   constructor(private databaseService: DatabaseService) {}
@@ -189,11 +189,7 @@ export class ShowBlogCategoriesService {
     });
 
     const edges = await this.databaseService.db.query.blog_categories.findMany({
-      ...pagination,
-      with: {
-        title: true,
-        description: true
-      }
+      ...pagination
     });
   }
 }
@@ -203,7 +199,7 @@ export class ShowBlogCategoriesService {
 
 If you want to use `where` argument you can pass it to the `findMany()` method using `and()` method from `drizzle-orm`.
 
-```ts {2, 34, 38}
+```ts {2, 38}
 import { Injectable } from "@nestjs/common";
 import { and, lte } from "drizzle-orm";
 
@@ -245,11 +241,7 @@ export class ShowBlogCategoriesService {
 
     const edges = await this.databaseService.db.query.blog_categories.findMany({
       ...pagination,
-      where: and(pagination.where, where),
-      with: {
-        title: true,
-        description: true
-      }
+      where: and(pagination.where, where)
     });
   }
 }
@@ -301,11 +293,7 @@ export class ShowBlogCategoriesService {
     });
 
     const edges = await this.databaseService.db.query.blog_categories.findMany({
-      ...pagination,
-      with: {
-        title: true,
-        description: true
-      }
+      ...pagination
     });
 
     const totalCount = await this.databaseService.db
