@@ -27,15 +27,6 @@ export const PluginsSectionTabsHome = () => {
         {
           id: 3,
           text: "Version Control System"
-        },
-        {
-          id: 4,
-          text: (
-            <>
-              <span className="font-bold text-primary">ESLint</span> &{" "}
-              <span className="font-bold text-primary">Prettier</span> include
-            </>
-          )
         }
       ]}
       footer={<>Time saved: ∞ hours</>}

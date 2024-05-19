@@ -8,14 +8,13 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "./views/**/*.{ts,tsx}",
-    "./lib/**/*.{ts,tsx}"
+    "./views/**/*.{ts,tsx}"
   ],
   prefix: "",
   theme: {
     container: {
       center: true,
-      padding: "1.5rem",
+      padding: "1rem",
       screens: {
         "2xl": "1400px"
       }
@@ -54,6 +53,10 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"
+        },
+        cover: {
+          DEFAULT: "hsl(var(--cover))",
+          foreground: "hsl(var(--cover-foreground))"
         }
       },
       borderRadius: {

@@ -35,10 +35,6 @@ export const AuthorizationSectionTabsHome = () => {
         {
           id: 4,
           text: "Session save in Database"
-        },
-        {
-          id: 5,
-          text: "Time saved: 12 hours"
         }
       ]}
     >
