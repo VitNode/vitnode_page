@@ -8,7 +8,7 @@ export const VideoHome = () => {
       whileHover={{
         scale: 1.25
       }}
-      className="aspect-video rounded-xl overflow-hidden mt-20 shadow-2xl lg:h-96"
+      className="aspect-video rounded-xl overflow-hidden shadow-2xl lg:h-96"
       transition={{
         duration: 0.5,
         ease: "circInOut"

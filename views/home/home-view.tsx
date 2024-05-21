@@ -7,9 +7,9 @@ export const HomeView = () => {
     <>
       <HeaderHome />
 
-      <PluginsSectionHome />
+      {/* <PluginsSectionHome />
 
-      <TabsSectionHome />
+      <TabsSectionHome /> */}
     </>
   );
 };
