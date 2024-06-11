@@ -1,5 +1,6 @@
 {
   "overview": "Overview",
+  "git": "Git",
   "database": "Database",
   "graphql": "GraphQL",
   "authorization": "Authorization",
@@ -8,5 +9,7 @@
   "cron": "Task Scheduling (CRON)",
   "pages": "Pages",
   "sitemap": "Sitemap",
-  "files": "Files"
+  "files": "Files",
+  "emails": "Emails",
+  "backend-context": "Backend Context"
 }

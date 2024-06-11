@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { type DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
+  gitTimestamp: null,
   logo: (
     <svg
       viewBox="0 0 546 129"

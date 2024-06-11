@@ -114,8 +114,6 @@ import { useDragAndDrop } from "@/hooks/core/drag&drop/use-functions";
 import { ItemDragAndDrop } from "@/hooks/core/drag&drop/item";
 import { ItemTableCategoriesCategoryAdmin } from "./item";
 
-const indentationWidth = 20;
-
 export const TableCategoriesCategoryAdmin = ({
   blog_categories__show: { edges }
 }: Admin_Blog_Categories__ShowQuery) => {
@@ -143,7 +141,7 @@ export const TableCategoriesCategoryAdmin = ({
       onDragCancel={resetState}
       onDragOver={onDragOver}
       onDragMove={e =>
-        onDragMove({ ...e, flattenedItems, maxDepth: 2, indentationWidth })
+        onDragMove({ ...e, flattenedItems, maxDepth: 2, indentationWidth: 20 })
       }
       onDragStart={onDragStart}
       onDragEnd={async event => {
@@ -297,7 +295,7 @@ export const TableCategoriesCategoryAdmin = ({
         {flattenedItems.map(item => (
           <ItemDragAndDrop
             key={item.id}
-            {...actionsItem({ data: item, indentationWidth })}
+            {...actionsItem({ data: item, indentationWidth: 20 })}
           >
             <ItemTableCategoriesCategoryAdmin data={item} />
           </ItemDragAndDrop>
