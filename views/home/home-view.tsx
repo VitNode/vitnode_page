@@ -1,3 +1,4 @@
+import { FeaturesHome } from "./features/features";
 import { HeaderHome } from "./header/header";
 import { PreviewSectionHome } from "./sections/preview";
 
@@ -6,6 +7,7 @@ export const HomeView = () => {
     <>
       <HeaderHome />
       <PreviewSectionHome />
+      <FeaturesHome />
 
       {/* <PluginsSectionHome />
 
