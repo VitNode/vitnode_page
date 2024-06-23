@@ -1,11 +1,11 @@
-import { TabsSectionHome } from "./sections/tabs/tabs";
 import { HeaderHome } from "./header/header";
-import { PluginsSectionHome } from "./sections/plugins/plugins";
+import { PreviewSectionHome } from "./sections/preview";
 
 export const HomeView = () => {
   return (
     <>
       <HeaderHome />
+      <PreviewSectionHome />
 
       {/* <PluginsSectionHome />
 
