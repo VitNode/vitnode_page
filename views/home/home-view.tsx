@@ -6,7 +6,7 @@ export const HomeView = () => {
   return (
     <>
       <HeaderHome />
-      <PreviewSectionHome />
+      {/* <PreviewSectionHome /> */}
       <FeaturesHome />
 
       {/* <PluginsSectionHome />
